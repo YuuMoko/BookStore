@@ -70,11 +70,24 @@ public class Book {
         this.category = category;
     }
 
-    public boolean isDel() {
+    public boolean getDel() {
         return del;
     }
 
     public void setDel(boolean del) {
         this.del = del;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "bid='" + bid + '\'' +
+                ", bname='" + bname + '\'' +
+                ", price=" + price +
+                ", author='" + author + '\'' +
+                ", image='" + image + '\'' +
+                ", category=" + category +
+                ", del=" + del +
+                '}';
     }
 }

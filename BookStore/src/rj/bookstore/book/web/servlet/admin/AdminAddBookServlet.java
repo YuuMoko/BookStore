@@ -34,7 +34,12 @@ public class AdminAddBookServlet extends HttpServlet {
 
         // 上传三步
 
-        DiskFileItemFactory factory = new DiskFileItemFactory(15*1024,new File("F:/f/temp"));
+        String tmpPath = this.getServletContext().getRealPath("/tmp");
+        File tmpDir = new File(tmpPath);
+        if (!tmpDir.exists()) {
+            tmpDir.mkdirs(); // 自动创建 tmp 目录
+        }
+        DiskFileItemFactory factory = new DiskFileItemFactory(15*1024,new File(tmpPath));
         ServletFileUpload sfu = new ServletFileUpload(factory);
 
         sfu.setFileSizeMax(15*1024);
@@ -77,7 +82,6 @@ public class AdminAddBookServlet extends HttpServlet {
             fileItemList.get(1).write(destFile);
 
             book.setImage("book_img/" + filename);
-
 
 
             bookService.add(book);

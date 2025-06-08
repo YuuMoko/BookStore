@@ -71,8 +71,8 @@ public class BookDao {
     public void add(Book book) {
 
         try{
-            String sql = "insert into book values(?,?,?,?,?,?)";
-            Object[] params = {book.getBid(),book.getBname(),book.getPrice(),book.getAuthor(),book.getImage(),book.getCategory().getCid()};
+            String sql = "insert into book values(?,?,?,?,?,?,?)";
+            Object[] params = {book.getBid(),book.getBname(),book.getPrice(),book.getAuthor(),book.getImage(),book.getCategory().getCid(), book.getDel()};
             qr.update(sql,params);
 
         }catch (SQLException e) {

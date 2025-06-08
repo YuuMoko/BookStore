@@ -18,6 +18,5 @@
   </head>
   
   <body style="margin: 0px;">
-    <img src="<c:url value='/images/welcome.jpg'/>" width="50%" height="75%"/>
   </body>
 </html>

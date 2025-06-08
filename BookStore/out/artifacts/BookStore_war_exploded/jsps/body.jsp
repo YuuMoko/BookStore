@@ -22,6 +22,5 @@
   </head>
   
   <body>
-    <img src="<c:url value='../bg/bg_3.jpg'/>" width="50%" height="60%"/>
   </body>
 </html>

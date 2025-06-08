@@ -25,7 +25,7 @@ public class AdminServlet extends BaseServlet {
     public String login(HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
 
         request.setCharacterEncoding("utf-8");
-        System.out.println(request.getParameter("username") + "," + request.getParameter("password"));
+        System.out.println(request.getParameter("adminname") + "," + request.getParameter("password"));
         Admin form = CommonUtils.toBean(request.getParameterMap(),Admin.class);
 
         try {

@@ -56,7 +56,7 @@ public class OrderDao {
 
     public List<Order> findById(String uid) {
         try {
-            String sql = "select * from orders where uid=?";
+            String sql = "select * from orders where owner_uid=?";
             List<Order> orderList = qr.query(sql, new BeanListHandler<Order>(Order.class), uid);
 
             for(Order order : orderList) {
